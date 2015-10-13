@@ -1,0 +1,20 @@
+<div class="row question-title">
+  <%=@question.title%>
+</div>
+<div class="row question-answers">
+  <%=link_to solve_question_path(:id => @question.id , :answer => @question.option1) do%>
+    <div class="answer small-offset-4 small-2 columns"><%=@question.option1%></div>
+  <%end%>
+  <%=link_to solve_question_path(:id => @question.id , :answer => @question.option2) do%>
+      <div class="answer small-2 columns end"><%=@question.option2%></div>
+  <%end%>
+
+</div>
+<div class="row question-answers">
+  <%=link_to solve_question_path(:id => @question.id , :answer => @question.option3) do%>
+      <div class="answer small-offset-4 small-2 columns"><%=@question.option3%></div>
+  <%end%>
+  <%=link_to solve_question_path(:id => @question.id , :answer => @question.option4) do%>
+      <div class="answer small-2 columns end"><%=@question.option4%></div>
+  <%end%>
+</div>

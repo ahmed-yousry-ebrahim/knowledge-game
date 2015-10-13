@@ -1,0 +1,9 @@
+<%unless session[:user_id].nil?%>
+    <div class="header row">
+      <% user = User.find(session[:user_id])%>
+      <div class="row">الاسم : <%=user.name%></div>
+      <div class="row">الاخطاء المتبقية : <%user.lifes.times{%><i class="fa fa-heart"></i> <%}%></div>
+      <div class="row">اعلى درجة : <%=user.high_score%></div>
+      <div class="row">الدرجة الحالية: <%=user.score%></div>
+    </div>
+<%end%>

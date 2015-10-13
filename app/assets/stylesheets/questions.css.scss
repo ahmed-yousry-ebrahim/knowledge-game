@@ -1,0 +1,22 @@
+.question-title{
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  color: red;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.answer{
+  font-size: 20px;
+  padding: 20px;
+  border-radius: 500px;
+  border: 1px dotted;
+  margin: 20px;
+  text-align: center;
+  background-color: #403E3E;
+  color: #CECE45;
+  &:hover{
+    background-color: #CECE45;
+    color: #403E3E;
+  }
+}

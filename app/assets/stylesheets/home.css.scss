@@ -1,0 +1,54 @@
+.title-header{
+  margin:25px auto;
+  font-size: 50px;
+  font-weight: bold;
+  color: green;
+}
+.category{
+  height: 200px;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 90px;
+  font-size: 25px;
+  font-weight: bold;
+  margin: 5px 5px;
+  color: navajowhite;
+}
+.islamic-history{
+  background-color: #E13100;
+  &:hover{
+    color: #E13100;
+    background-color: #D5FFF5;
+  }
+}
+
+.general-knowledge{
+  background-color: #65AB0C;
+  &:hover{
+    color: #65AB0C;
+    background-color: #D5FFF5;
+  }
+}
+
+.puzzle{
+  background-color: #00A4C0;
+  &:hover{
+    color: #00A4C0;
+    background-color: #D5FFF5;
+  }
+}
+
+.art{
+  background-color: #DEA716;
+  &:hover{
+    color: #DEA716;
+    background-color: #D5FFF5;
+  }
+}
+
+.header{
+  margin-top: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  color: darkolivegreen;
+}

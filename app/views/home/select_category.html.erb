@@ -1,0 +1,23 @@
+
+<div class="row text-center title-header">
+  اختر فئة الاسئلة
+</div>
+
+<div class="row">
+  <%=link_to random_questions_path(:category=>"islamic") do %>
+    <div class="small-offset-3 islamic-history category small-3 columns">تاريخ اسلامى</div>
+  <%end%>
+  <%=link_to random_questions_path(:category=>"general") do %>
+    <div class="general-knowledge category small-3 columns end">ثقافة عامة</div>
+  <%end%>
+</div>
+<div class="row">
+  <%=link_to random_questions_path(:category=>"puzzle") do %>
+    <div class="small-offset-3 puzzle category small-3 columns">الغاز</div>
+  <%end%>
+  <%=link_to random_questions_path(:category=>"arts") do %>
+    <div class="art category small-3 columns end">فنون</div>
+  <%end%>
+</div>
+
+
