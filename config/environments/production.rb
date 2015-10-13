@@ -80,5 +80,7 @@ Rails.application.configure do
   config.action_dispatch.default_headers = {
           'X-Frame-Options' => 'ALLOWALL'
     }
+  config.facebook_app_id = "184473875220281"
+  config.facebook_app_secret = "1b36d5743a31081d135ad0fddc230a0a"
 
 end
