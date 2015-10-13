@@ -26,13 +26,20 @@ class HomeController < ApplicationController
         @user.fbid = @profile['id']
         if @user.save!
           session[:user_id] = @user.id
+          session[:access_token] = access_token
         end
       else
         session[:user_id] = @user.id
       end
     else
       @user = User.find(session[:user_id])
+      @user.lifes = 3
+      @user.save
     end
+  end
+
+  def game_over
+
   end
 
 end

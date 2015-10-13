@@ -1,7 +1,7 @@
 <% if flash.present? %>
 <div class="centered-row row">
     <div class="flash-messages small-12 column text-centered">
-        <% [:notice, :error, :alert].each do |level| %>
+        <% [:notice, :error, :alert, :success].each do |level| %>
         <% unless flash[level].blank? %>
         <div data-alert class="<%= flash_class level %>">
             <%= flash[level] %><a href="#" class="close">&times;</a>

@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :home do
     collection do
       get "select_category"
+      get "game_over"
     end
   end
   resources :questions do

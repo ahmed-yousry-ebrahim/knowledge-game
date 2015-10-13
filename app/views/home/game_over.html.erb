@@ -1,0 +1,13 @@
+<div class="row centered-row game-over">
+    لقد اجبت عن ثلاثة اسئلة خطأ .. حاول مرة اخرى
+    <%=image_tag("gameover.jpeg")%>
+</div>
+<div class="row centered-row game-over-actions">
+  <%=link_to select_category_home_index_path do %>
+  <div class="right button success"><i class="fa fa-refresh"></i>  اعادة المحاولة</div>
+  <%end%>
+
+  <%=link_to "#" do %>
+      <div class="left button alert"><i class="fa fa-share-square-o"></i>  شارك درجتك</div>
+  <%end%>
+</div>

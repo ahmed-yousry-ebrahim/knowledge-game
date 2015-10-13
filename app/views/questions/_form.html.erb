@@ -33,6 +33,11 @@
   </div>
 
     <div class="field">
+      <%= f.label :answer %><br>
+      <%= f.text_field :answer %>
+    </div>
+
+    <div class="field">
       <%= f.label :category %><br>
       <%= f.select :category, options_for_select([["تاريخ اسلامى","islamic"],["ثقافة عامة","general"],["الغاز","puzzle"],["فنون","arts"]]) %>
     </div>

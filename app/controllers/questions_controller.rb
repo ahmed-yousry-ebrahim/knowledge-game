@@ -44,7 +44,25 @@ class QuestionsController < ApplicationController
   end
 
   def solve
+    @current_user = User.find(session[:user_id])
+    @question = Question.find(params[:id])
+    if @question.answer == params[:answer]
+      @current_user.score += 100
+      flash[:success] = 'اجابة صحيحة'
+      if @current_user.score > @current_user.high_score
+        @current_user.high_score = @current_user.score
+      end
+    else
+      flash[:error] = "اجابة خاطئة حاول مرة اخرى"
+      @current_user.lifes -= 1
 
+    end
+    @current_user.save
+    if @current_user.lifes > 0
+      redirect_to random_questions_path(:category => @question.category)
+    else
+      redirect_to game_over_home_index_path(:score => @current_user.score)
+    end
   end
 
   private
@@ -53,6 +71,6 @@ class QuestionsController < ApplicationController
     end
 
     def question_params
-      params.require(:question).permit(:title, :option1, :option2, :option3, :option4, :category)
+      params.require(:question).permit(:title, :option1, :option2, :option3, :option4, :answer, :category)
     end
 end
