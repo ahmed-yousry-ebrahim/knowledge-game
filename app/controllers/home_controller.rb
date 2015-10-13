@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-
+  skip_before_filter  :verify_authenticity_token
   def index
     if session[:user_id].nil?
       @oauth= Koala::Facebook::OAuth.new("184818248519177", "e65c5d4c46d30fa32fa7f52d963128d8",select_category_home_index_url)
