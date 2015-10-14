@@ -61,6 +61,7 @@ class QuestionsController < ApplicationController
     if @current_user.lifes > 0
       redirect_to random_questions_path(:category => @question.category)
     else
+      flash[:error] = ""
       redirect_to game_over_home_index_path(:score => @current_user.score)
     end
   end
