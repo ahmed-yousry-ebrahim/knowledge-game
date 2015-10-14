@@ -1,3 +1,16 @@
+<div id="claimModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+  <h2 id="modalTitle">Awesome. I have it.</h2>
+  <p class="lead">Your couch.  It is mine.</p>
+  <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
+  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+</div>
+
+<div id="noClaimModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+  <h2 id="modalTitle">Cannot claim</h2>
+  <p class="lead">Your couch.  It is mine.</p>
+  <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
+  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+</div>
 <div class="row centered-row game-over">
     لقد اجبت عن ثلاثة اسئلة خطأ .. حاول مرة اخرى
     <%=image_tag("gameover.jpeg")%>
@@ -7,7 +20,113 @@
   <div class="right button success"><i class="fa fa-refresh"></i>  اعادة المحاولة</div>
   <%end%>
 
-  <%=link_to "#" do %>
+  <%=link_to share_score_home_index_path, :remote => true do %>
       <div class="left button alert"><i class="fa fa-share-square-o"></i>  شارك درجتك</div>
   <%end%>
+</div>
+<div class="row well">
+<div class="row prize-title">
+  اختر هديتك
+</div>
+<div class="row prizes-container">
+  <div class="small-2 columns prize well">
+    <div class="name">
+      10 جنيه رصيد
+    </div>
+    <div class="image">
+      <%=image_tag("credit.png")%>
+    </div>
+    <div class="points">
+      200 نقطة
+    </div>
+    <% if @user.score >= 200
+         can_claim= true
+       else
+         can_claim = false
+       end%>
+    <div class="claim">
+      <a href="#" class="button <%=can_claim ? 'success' : 'alert disabled'%>" data-reveal-id="<%=can_claim ? 'claimModal' : 'noClaimModal'%>">استلم هديتك</a>
+    </div>
+  </div>
+
+  <div class="small-2 columns prize well">
+    <div class="name">
+      20 جنيه رصيد
+    </div>
+    <div class="image">
+      <%=image_tag("credit.png")%>
+    </div>
+    <div class="points">
+      500 نقطة
+    </div>
+    <% if @user.score >= 500
+         can_claim= true
+       else
+         can_claim = false
+       end%>
+    <div class="claim">
+      <a href="#" class="button <%=can_claim ? 'success' : 'alert disabled'%>" data-reveal-id="<%=can_claim ? 'claimModal' : 'noClaimModal'%>">استلم هديتك</a>
+    </div>
+  </div>
+
+  <div class="small-2 columns prize well">
+    <div class="name">
+      يو اس بى مودم
+    </div>
+    <div class="image">
+      <%=image_tag("usb-modem.png")%>
+    </div>
+    <div class="points">
+      1000 نقطة
+    </div>
+    <% if @user.score >= 1000
+        can_claim= true
+    else
+        can_claim = false
+    end%>
+    <div class="claim">
+      <a href="#" class="button <%=can_claim ? 'success' : 'alert disabled'%>" data-reveal-id="<%=can_claim ? 'claimModal' : 'noClaimModal'%>">استلم هديتك</a>
+    </div>
+  </div>
+
+  <div class="small-2 columns prize well">
+    <div class="name">
+      سامسونج جالكسى جراند
+    </div>
+    <div class="image">
+      <%=image_tag("samsung.png")%>
+    </div>
+    <div class="points">
+      2000 نقطة
+    </div>
+    <% if @user.score >= 2000
+         can_claim= true
+       else
+         can_claim = false
+       end%>
+    <div class="claim">
+      <a href="#" class="button <%=can_claim ? 'success' : 'alert disabled'%>" data-reveal-id="<%=can_claim ? 'claimModal' : 'noClaimModal'%>">استلم هديتك</a>
+    </div>
+  </div>
+
+  <div class="small-2 columns prize well">
+    <div class="name">
+      ال جى نيكسس
+    </div>
+    <div class="image">
+      <%=image_tag("nexus.png")%>
+    </div>
+    <div class="points">
+      5000 نقطة
+    </div>
+    <% if @user.score >= 5000
+         can_claim= true
+       else
+         can_claim = false
+       end%>
+    <div class="claim">
+      <a href="#" class="button <%=can_claim ? 'success' : 'alert disabled'%>" data-reveal-id="<%=can_claim ? 'claimModal' : 'noClaimModal'%>">استلم هديتك</a>
+    </div>
+  </div>
+</div>
 </div>

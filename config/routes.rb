@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     collection do
       get "select_category"
       get "game_over"
+      get "share_score"
     end
   end
   resources :questions do

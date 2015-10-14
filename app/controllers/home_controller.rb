@@ -34,12 +34,27 @@ class HomeController < ApplicationController
     else
       @user = User.find(session[:user_id])
       @user.lifes = 3
+      @user.score = 0
       @user.save
     end
   end
 
   def game_over
-
+    @user = User.find(session[:user_id])
   end
+
+  def share_score
+    # puts session[:access_token]
+    # @user = User.find(session[:user_id])
+    # unless session[:access_token].nil?
+    #
+    #   graph = Koala::Facebook::API.new(session[:access_token])
+    #   graph.put_connections("me", "feed", message: "لقد حصلت على #{@user.score} فى لعبة اختبر معلوماتك")
+    #   respond_to  do |format|
+    #     format.js
+    #   end
+    # end
+  end
+
 
 end
