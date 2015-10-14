@@ -1,15 +1,21 @@
 <div id="claimModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-  <h2 id="modalTitle">Awesome. I have it.</h2>
-  <p class="lead">Your couch.  It is mine.</p>
-  <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
-  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+  <h2 id="modalTitle">مبروك نقاطك مكنتك من الحصول على هذه الهدية</h2>
+  <p class="lead">ضع رقم تليفونك وسيقوم احد عملائنا بالاتصال بك</p>
+  <div class="text-center"><input type="text" /></div>
+  <div class="text-left">
+    <a class="button success" aria-label="Close">استلم هديتك</a>
+  </div>
+
 </div>
 
 <div id="noClaimModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-  <h2 id="modalTitle">Cannot claim</h2>
-  <p class="lead">Your couch.  It is mine.</p>
-  <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
-  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+  <h2 id="modalTitle">نقاطك الحالية لا تسمح لك باستلام هذه الهدية</h2>
+  <p class="lead">حاول اعادة اللعب مرة اخرى لزيادة نقاطك</p>
+    <div class="text-center">
+    <%=link_to select_category_home_index_path do %>
+      <div class="button success center"><i class="fa fa-refresh"></i>  اعادة المحاولة</div>
+    <%end%>
+    </div>
 </div>
 <div class="row centered-row game-over">
     لقد اجبت عن ثلاثة اسئلة خطأ .. حاول مرة اخرى
