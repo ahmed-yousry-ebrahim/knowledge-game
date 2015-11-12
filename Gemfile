@@ -33,6 +33,7 @@ gem 'cancan'
 gem 'foundation-rails', '~> 5.2.1.0'
 # icons font
 gem "font-awesome-rails"
+gem "savon"
 
 #attachments
 gem "paperclip", "~> 4.2"
